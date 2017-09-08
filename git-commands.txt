@@ -1,0 +1,141 @@
+----------------------------------------------------------------
+# Git config information
+----------------------------------------------------------------
+git config --global user.name "Mahesh J"
+git config --global user.email "mahesh.ramalingam@davinta.com"
+
+# list the config available
+git config --global --list
+
+----------------------------------------------------------------
+# Cloning a repository
+----------------------------------------------------------------
+Mramalingam@DTIPL-LT-109 MINGW64 /d/maghi711/projects
+$ git clone https://github.com/mramalingam/github-demo.git
+Cloning into 'github-demo'...
+remote: Counting objects: 3, done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+
+----------------------------------------------------------------
+# Check the repository status
+----------------------------------------------------------------
+$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+
+nothing to commit, working tree clean
+
+----------------------------------------------------------------
+# Creating a new file
+----------------------------------------------------------------
+$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   README.md
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        start.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Mramalingam@DTIPL-LT-109 MINGW64 /d/maghi711/projects/github-demo (master)
+$ git add start.txt
+warning: LF will be replaced by CRLF in start.txt.
+The file will have its original line endings in your working directory.
+
+Mramalingam@DTIPL-LT-109 MINGW64 /d/maghi711/projects/github-demo (master)
+$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   start.txt
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   README.md
+
+$ git commit -m "Adding start text file"
+[master 216203f] Adding start text file
+ 1 file changed, 1 insertion(+)
+ create mode 100644 start.txt
+
+
+Mramalingam@DTIPL-LT-109 MINGW64 /d/maghi711/projects/github-demo (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Mramalingam@DTIPL-LT-109 MINGW64 /d/maghi711/projects/github-demo (master)
+$ git push origin master
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 322 bytes | 322.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/mramalingam/github-demo.git
+   a26687e..216203f  master -> master
+
+Mramalingam@DTIPL-LT-109 MINGW64 /d/maghi711/projects/github-demo (master)
+$ git add README.md
+
+Mramalingam@DTIPL-LT-109 MINGW64 /d/maghi711/projects/github-demo (master)
+$ git commit -m "Modified the readme statement to reflect the original repository description"
+[master decac87] Modified the readme statement to reflect the original repository description
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+Mramalingam@DTIPL-LT-109 MINGW64 /d/maghi711/projects/github-demo (master)
+$ gits
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+Mramalingam@DTIPL-LT-109 MINGW64 /d/maghi711/projects/github-demo (master)
+$ git push origin master
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 423 bytes | 423.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/mramalingam/github-demo.git
+   216203f..decac87  master -> master
+
+   
+alias npp='notepad++.exe -multiInst -nosession'
+
+Mramalingam@DTIPL-LT-109 MINGW64 /d/maghi711/projects/github-demo (master)
+$ git config --global core.editor "notepad++.exe -multiInst -nosession"
+
+Mramalingam@DTIPL-LT-109 MINGW64 /d/maghi711/projects/github-demo (master)
+$ git config --global -list
+error: did you mean `--list` (with two dashes ?)
+
+Mramalingam@DTIPL-LT-109 MINGW64 /d/maghi711/projects/github-demo (master)
+$ git config --global --list
+user.name=Mahesh Ramalingam
+user.email=mahesh.ramalingam@davinta.com
+core.editor=notepad++.exe -multiInst -nosession
