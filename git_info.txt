@@ -1,0 +1,12 @@
+Git basics overview		
+Starting a project
+	Fresh(no source yet)	-	done
+	Existing source locally	-	
+	GitHub project (Fork and Clone)
+Basic Workflow (add, commit, push & pull)
+Working with files (rename, move and delete)
+History and aliases
+Ignoring unwanted files
+
+https://hipsum.co - provides dummy content
+http://www.initializr.com/ provides dummy project
