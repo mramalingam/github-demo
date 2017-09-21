@@ -9,4 +9,4 @@ History and aliases
 Ignoring unwanted files
 
 https://hipsum.co - provides dummy content
-http://www.initializr.com/ provides dummy project
+http://www.initializr.com/ provides dummy html, css project
